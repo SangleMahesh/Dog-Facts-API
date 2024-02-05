@@ -2,15 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg");
+    background-image: url("https://source.unsplash.com/random");
     background-size: cover;
-    background-attachment: fixed;   
+    background-attachment: fixed;  
+
 }
 .container {
 	width: 550px;
@@ -28,13 +29,13 @@ body {
 .main-content {
 	
 	padding: 50px 40px;
-	background-color: hsla(0, 0%, 100%,0.1);
+	background-color: hsla(0, 0%, 100%,0);
 	border-radius: 15px;
-	box-shadow: 0 25px 31px 0 rgba(0,0,0,0.5);
+	box-shadow: 0 25px 31px 0 rgba(0,0,0,0.2);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    backdrop-filter:  blur(2px);
+    backdrop-filter:  blur(6px);
 
 }
 

@@ -1,13 +1,29 @@
-const URL = "https://dog-api.kinduff.com/api/facts"
 const quote = document.querySelector(".quote")
 const btn = document.getElementById("Qbtn")
+const URL = "https://dog-api.kinduff.com/api/facts"
+let imgData, data
+const preload = async () => {
+    try {
+        const [imgResponse, factsResponse] = await Promise.all([
+            fetch("https://random.imagecdn.app/1440/2160/"),
+            fetch(URL)
+        ]);
 
-const getFacts = async () => {
-    let response = await  fetch(URL);
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    let data =  await response.json()
-    
-    quote.innerText = data.facts[0]
+        const [img, fact] = await Promise.all([
+            imgResponse,
+            factsResponse.json()
+        ]);
+        imgData = img
+        data = fact
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+}
+preload()
+const getFacts = () => {
+    document.body.style.backgroundImage = `url(${imgData.url})`;
+    quote.innerText = data.facts[0];
 }
 
 btn.addEventListener("click", getFacts)
+btn.addEventListener("click", preload)
