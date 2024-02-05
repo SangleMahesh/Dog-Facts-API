@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-image: url("https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg");
     background-size: cover;
     background-attachment: fixed;   
 }
@@ -28,18 +28,20 @@ body {
 .main-content {
 	
 	padding: 50px 40px;
-	background-color: #fff;
+	background-color: hsla(0, 0%, 100%,0.1);
 	border-radius: 15px;
 	box-shadow: 0 25px 31px 0 rgba(0,0,0,0.5);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    backdrop-filter:  blur(2px);
+
 }
 
 .text-area {
 	text-align: center;
 	font-size: 25px;
-	color: #262626;
+	color: white;
 	line-height: 1.5;
     
 }
